@@ -1,0 +1,24 @@
+{
+  "name": "a04-rps-api-standup",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standing up the RPS game in an API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a04-beccalewis.git"
+  },
+  "author": "@beccalewis",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a04-beccalewis/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a04-beccalewis#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.8"
+  }
+}
