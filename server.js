@@ -2,8 +2,8 @@
 // the code to run the server hehe
 import minimist from "minimist"
 import express from "express"
-import {rps} from "./lib/rpsls.js"
-import {rpsls} from "./lib.rpsls.js"
+import {rps} from "./lib/lib/rpsls.js"
+import {rpsls} from "./lib/lib/rpsls.js"
 
 const app = express()
 
@@ -12,6 +12,7 @@ const app = express()
 
 const args = minimist(process.argv.slice(2));
 const port = args.port || 5000; // don't think this is working quite right yet... check later
+console.log(port);
 
 app.listen(
  port, () => console.log(port)
@@ -62,8 +63,5 @@ app.get("*", (req, res) => {
   });
 
 
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
-});
 
 
