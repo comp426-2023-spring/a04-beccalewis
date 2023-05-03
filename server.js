@@ -12,10 +12,9 @@ const app = express()
 
 const args = minimist(process.argv.slice(2));
 const port = args.port || 5000; // don't think this is working quite right yet... check later
-console.log(port);
 
 app.listen(
- port, () => console.log(port)
+ port, () => console.log('App running on ${PORT}')
 )
 
 app.use(express.json());
