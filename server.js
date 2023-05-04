@@ -5,20 +5,17 @@ import express from "express"
 import {rps} from "./lib/lib/rpsls.js"
 import {rpsls} from "./lib/lib/rpsls.js"
 
-const app = express()
 
 // take in arbitrary port number from command line - set default to 5000
 
 
 const args = minimist(process.argv.slice(2));
-const port = args.port || 5000; // don't think this is working quite right yet... check later
+const port = args.port || 5000; 
+const app = express()
 
-app.listen(
- port, () => console.log('App running on ${PORT}')
-)
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/app", (req, res) => {
   res.status(200).send("200 OK");
@@ -61,6 +58,9 @@ app.get("*", (req, res) => {
     res.status(404).send("404 NOT FOUND");
   });
 
+app.listen(
+ port, () => console.log('App running on port ' + port)
+)
 
 
 
